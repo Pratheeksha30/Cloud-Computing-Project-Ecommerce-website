@@ -95,7 +95,5 @@ const addProducts = async () => {
     }
     return;
 }
-
 addProducts();
-
 module.exports={users,products,carts};
