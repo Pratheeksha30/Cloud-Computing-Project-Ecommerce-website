@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <div class="nav">
+        <h1 style="color: white;">Cloud</h1>
+        <div class="nav-items">
+            <!-- <form action="" method="post"> -->
+                <h2 style="color:whitesmoke">Your Cart </h2>
+        </div>
+    </div>
+        <ul class="links-container">
+        <li class="link-item"><a href="/" class="link">Continue Shopping</a></li>
+    </ul>
+
+    <section class="product">
+        <div class="product-container">
+        {{#each items}}
+        <div class="product-card" name="Biba">
+            <div class="product-image">
+                <a href="/product"><img src="/products/{{this.prodId}}.png" class="product-thumb" alt=""></a>
+            </div>
+            <div class="product-info">
+                <h2 class="product_brand" name="product_brand">{{this.prodName}}</h2>
+                <p class="product-short-des">{{this.prodDesc}}</p>
+                <span class="price">₹{{this.prodPrice}}</span>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+    </section>
+    {{#if isnotMessage}}
+    </div>
+        <ul class="links-container">
+        <li class="link-item"><a href="/order" class="link" style="font-size: larger;">Place Your Order</a></li>
+    </ul>
+    {{/if}}
+
+    <h2>{{message}}</h2>
+
+
+
+</body>
+</html>
