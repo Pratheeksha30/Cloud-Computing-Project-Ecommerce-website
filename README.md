@@ -1,6 +1,6 @@
 # Cloud Computing - UE20CS351
 Submitted by: 
-              B5 - PES2UG20CS239, PES2UG20CS246, PES2UG20CS255.
+        B5 - PES2UG20CS239, PES2UG20CS246, PES2UG20CS255.
 
 # Problem Statement 6 : Building an E-commerce Microservices Application on Cloud using Docker, Kubernetes, Jenkins, and Git
 ## Overview:
