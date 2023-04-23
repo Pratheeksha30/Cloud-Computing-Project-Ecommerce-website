@@ -7,7 +7,6 @@ const carts = require("./mongodb").carts;
 
 let user = null;
 let cartEmpty = true;
-
 var prod1,prod2,prod3,prod4, allProds;
 
 const getProds = async (req,res)=>{
