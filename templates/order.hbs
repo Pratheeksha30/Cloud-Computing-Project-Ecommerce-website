@@ -17,28 +17,28 @@
                 <a href="/" class="link" style="color: whitesmoke;">Home</a>
         </div>
     </div>
-        <ul class="links-container"><br><br>
-        <li class="link-item" class="link" style="font-size: xx-large;">Your Order Has Been Placed !</li>
-    </ul>
+
+        <h2 style="font-size: xx-large; text-align : center; padding:20px;">Your Order Has Been Placed !</h2>
 
     <section class="product">
         <div class="product-container">
-        {{#each items}}
-        <div class="product-card" name="Biba">
-            <div class="product-image">
-                <a href="#"><img src="/products/{{this.prodId}}.png" class="product-thumb" alt=""></a>
-            </div>
-            <div class="product-info">
-                <h2 class="product_brand" name="product_brand">{{this.prodName}}</h2>
-                <p class="product-short-des">{{this.prodDesc}}</p>
-                <span class="price">₹{{this.prodPrice}}</span>
-            </div>
+            {{#each items}}
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="#"><img src="/products/{{this.prodId}}.png" class="product-thumb" alt=""></a>
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product_brand">{{this.prodName}}</h2>
+                        <p class="product-short-des">{{this.prodDesc}}</p>
+                        <span class="price">₹{{this.prodPrice}}</span>
+                    </div>
+                </div>
+            {{/each}}
         </div>
-        {{/each}}
-        </div>
+        <h2 style="text-align: center; padding:20px;"> Total Ammount : ₹{{total}}</h2>
     </section>
-
-    <h2>{{message}}</h2>
+    <br><br>
+    <h2 style="text-align: center;">{{message}}</h2>
 
 
 

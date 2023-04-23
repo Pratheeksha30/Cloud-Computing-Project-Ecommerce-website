@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://mongo:27017/Ecommerce")
+mongoose.connect("mongodb://localhost:27017/Ecommerce")
 .then(()=>{
     console.log("mongoDB connected");
 })
@@ -53,9 +53,29 @@ const cartSchema = new mongoose.Schema({
     }
 })
 
+const orderSchema = new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    order:{
+        type:Array,
+        required:true
+    },
+    total:{
+        type:Number,
+        required:true
+    },
+    orderedDate : {
+        type:String,
+        required:true
+    }
+})
+
 const users = new mongoose.model("Users",loginSchema);
 const products = new mongoose.model("Products",productSchema);
 const carts = new mongoose.model("Carts",cartSchema);
+const orders = new mongoose.model("Orders",orderSchema);
 
 const addProducts = async () => {
     data  = [{
@@ -95,5 +115,7 @@ const addProducts = async () => {
     }
     return;
 }
+
 addProducts();
-module.exports={users,products,carts};
+
+module.exports={users,products,carts,orders};
