@@ -9,7 +9,7 @@ const orders = require("./mongodb").orders;
 let user = null;
 let cartEmpty = true;
 
-var prod1, prod2, prod3, prod4, allProds;
+var prod1, prod2, prod3, prod4, prod5, allProds;
 
 const getProds = async () => {
     try {
@@ -17,6 +17,7 @@ const getProds = async () => {
         prod2 = await products.findOne({ _id: 2 });
         prod3 = await products.findOne({ _id: 3 });
         prod4 = await products.findOne({ _id: 4 });
+        prod5 = await products.findOne({ _id: 5 });
 
         allProds = {
             prod1: {
@@ -38,6 +39,11 @@ const getProds = async () => {
                 prodName: prod4.name,
                 prodDesc: prod4.description,
                 prodPrice: prod4.price
+            },
+            prod5: {
+                prodName: prod5.name,
+                prodDesc: prod5.description,
+                prodPrice: prod5.price
             }
         }
     }
