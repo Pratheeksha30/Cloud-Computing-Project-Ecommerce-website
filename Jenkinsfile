@@ -13,7 +13,7 @@ pipeline {
      
     stage('Build') {
       steps {
-        git 'https://github.com/Pratheeksha30/Cloud-Computing-Project.git
+        git 'https://github.com/Pratheeksha30/CloudComputing-Project.git'
       }
     }  
     
