@@ -13,7 +13,7 @@ pipeline {
      
     stage('Build') {
       steps {
-        git init
+        git log
       }
     }  
     
