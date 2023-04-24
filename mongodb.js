@@ -81,26 +81,32 @@ const addProducts = async () => {
     data  = [{
         _id : 1,
         name : "Kurti",
-        description : "Red Color",
+        description : "Red Color kurti.\nTailored with three quarter sleeves and a round neck",
         price : 899,
         stock : 2
     }, {
         _id : 2,
-        name : "Jeans",
-        description : "Blue Ripped Long",
-        price : 999,
+        name : "Blue Print Skirt",
+        description : "Blue kalidar lehenga skirt in georgette.\nIt features chevron foil print and tassels.\nFinished with a shantoon lining, and a zip closure.",
+        price : 3600,
         stock : 2
     }, {
         _id : 3,
-        name : "Skirt",
-        description : "Long Red",
+        name : "Black Print Kurta",
+        description : "Black tiered maxi kurta in viscose.\nTailored with three quarter sleeves and a round neck, it features an all-over boota print, mirror embroidery and a dori tie up on the front.\nFinished with a zip closure and two pockets.",
         price : 599,
         stock : 2
     }, {
         _id : 4,
-        name : "Denim",
-        description : "Blue Jacket",
-        price : 799,
+        name : "Floral Midi Dress",
+        description : "Blue maxi dress in georgette.\nTailored sleeveless with a V-neck, it features all-over floral print.\nFinished with shantoon lining and a zip closure.",
+        price : 2599,
+        stock : 2
+    }, {
+        _id : 5,
+        name : "Mughal Print Lehenga",
+        description : "Ivory kalidar lehenga in georgette.\nIt features an all-over floral print and mughal border.\nFinished with a shantoon lining and a zip closure.",
+        price : 3560,
         stock : 2
     }]
     try{
