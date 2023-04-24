@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/Ecommerce")
+mongoose.connect("mongodb://mongo:27017/Ecommerce")
 .then(()=>{
     console.log("mongoDB connected");
 })
