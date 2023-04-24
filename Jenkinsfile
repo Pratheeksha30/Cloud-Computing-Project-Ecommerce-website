@@ -13,14 +13,14 @@ pipeline {
      
     stage('Build') {
       steps {
-        git 'https://github.com/Pratheeksha30/Cloud-Computing-Project.git'
+        git init
       }
     }  
     
             
     stage('Test') {
       steps {
-        git 'https://github.com/Pratheeksha30/Cloud-Computing-Project.git'
+        git log
       }
     }
   }
