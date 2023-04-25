@@ -13,7 +13,7 @@ pipeline {
      
     stage('Build') {
       steps {
-        sh npm install
+        git 'https://github.com/Pratheeksha30/Cloud-Computing-Project.git'
       }
     }  
     
