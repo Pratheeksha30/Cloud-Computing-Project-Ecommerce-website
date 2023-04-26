@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 var fs = require('fs');
 
-mongoose.connect("mongodb://localhost:27017/Ecommerce")
+mongoose.connect("mongodb://mongo:27017/Ecommerce")
 .then(()=>{
     console.log("mongoDB connected");
 })
