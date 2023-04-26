@@ -11,8 +11,11 @@
     <div class="container">
         <h1 style="font-size: larger;">Sign Up</h1>
         <form action="/signup" method="post">
-            <input type="text" autocomplete="off" name="name" id="name" placeholder="name">
-            <input type="password" autocomplete="off" name="password" id="password" placeholder="password">
+            <input type="text" autocomplete="off" name="name" placeholder="full name">
+            <input type="text" autocomplete="off" name="id" placeholder="username">
+            <input type="password" autocomplete="off" name="password" placeholder="password">
+            <input type="text" autocomplete="off" name="address" placeholder="address">
+            <input type="text" autocomplete="off" name="phone" placeholder="phone number">
             <button type="submit" class="submit-btn">Create Account</button>
         </form>
         <a href="/login" class="link">Already have an account? Log in here</a>

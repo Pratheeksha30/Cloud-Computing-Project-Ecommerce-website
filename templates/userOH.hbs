@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>Old Order</title>
     <link rel="stylesheet" href="/css/home.css">
 </head>
 
@@ -13,9 +13,9 @@
         <h1 style="color: white;">Cloud</h1>
         <div class="nav-items">
             <!-- <form action="" method="post"> -->
-                <h2 style="color:whitesmoke; font-size:x-large">Track Your Orders </h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <h2 style="color:whitesmoke; font-size:x-large">Order History</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="/" class="link" style="color: whitesmoke;">Home</a>
-                <a href="/userOH" class="link" style="color: whitesmoke;">Order History</a>
+                <a href="/ordersList" class="link" style="color: whitesmoke;">Current Orders</a>
         </div>
     </div>
 
@@ -34,9 +34,7 @@
                 {{/each}}<br><br>
                 <h2 class="heading" style="font-size:medium;">Total Ammount : ₹{{this.total}}</h2><br>
                 <h2 class="heading" style="font-size:medium;">Ordered On : {{this.orderedDate}}</h2><br><br>
-                <form action="/ordersList" method="post">
-                    <button type="submit" name="oid" value={{this._id}}>Cancel Order</button>
-                </form>
+                <h2 class="heading" style="font-size:medium;">Delivered On : {{this.deliveredDate}}</h2><br><br>
             </div>
         {{/each}}
     </section>

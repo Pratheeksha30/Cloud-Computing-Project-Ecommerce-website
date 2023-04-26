@@ -13,12 +13,12 @@
     <div class="nav">
         <h1 style="color: white;">Cloud</h1>
         <div class="nav-items">
-            <!-- <form action="" method="post"> -->
+            <form action="" method="post">
                 <div class="search">
-                    <input type="text" class="search-box" placeholder="search brand, product" name="userSearch">
-                    <button class="search-btn">Search</button>
+                    <input type="text" class="search-box" placeholder="search product by category" name="userSearch">
+                    <button type="submit" class="search-btn">Search</button>
                 </div>
-            <!-- </form> -->
+            </form>
             
             <a href="/login" class="link" style="color: whitesmoke;">Account</a>
             <a href="/cart" class="link" style="color: whitesmoke;">Cart</a>
@@ -27,84 +27,27 @@
     </div>
     <ul class="links-container">
         <li class="link-item"><a href="/" class="link">Home</a></li>
-        <li class="link-item"><a href="#" class="link">Clothing</a></li>
-        <li class="link-item"><a href="#" class="link">Accessories</a></li>
     </ul>
 
-    <h2>{{message}}</h2>
+    <h2 style="text-align: center;">{{message}}</h2>
 
     <section class="product">
         <div class="product-container">
-            <form action="/" method="post">
-                <div class="product-card" >
-                    <div class="product-image">
-                        <a href="#"><img src="/products/1.png" class="product-thumb"  alt=""></a>
-                        <button class="card-btn" name="id" value=1 type="submit">Add To Cart</button>
+            {{#each items}}
+                <form action="/" method="post">
+                    <div class="product-card" >
+                        <div class="product-image">
+                            <a href="#"><img src="data:image/{{image.img.contentType}};base64,{{str this.img.data}}" class="product-thumb"  alt=""></a>
+                            <button class="card-btn" name="id" value={{this._id}} type="submit">Add To Cart</button>
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product_brand" >{{this.name}}</h2>
+                            <p class="product-short-des" >{{this.description}}</p>
+                            <span class="price" >₹{{this.price}}</span>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h2 class="product_brand" >{{prod1.prodName}}</h2>
-                        <p class="product-short-des" >{{prod1.prodDesc}}</p>
-                        <span class="price" >₹{{prod1.prodPrice}}</span>
-                    </div>
-                </div>
-            </form>
-            
-            <form action="/" method="post">
-                <div class="product-card" >
-                    <div class="product-image">
-                        <a href="#"><img src="/products/2.png" class="product-thumb"  alt=""></a>
-                        <button class="card-btn" name="id" value=2 type="submit">Add To Cart</button>
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product_brand">{{prod2.prodName}}</h2>
-                        <p class="product-short-des">{{prod2.prodDesc}}</p>
-                        <span class="price">₹{{prod2.prodPrice}}</span>
-                    </div>
-                </div>
-            </form>
-            
-            <form action="/" method="post">
-                <div class="product-card" >
-                    <div class="product-image">
-                        <a href="#"><img src="/products/3.png" class="product-thumb" alt=""></a>
-                        <button class="card-btn" name="id" value=3 type="submit">Add To Cart</button>
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product_brand">{{prod3.prodName}}</h2>
-                        <p class="product-short-des">{{prod3.prodDesc}}</p>
-                        <span class="price">₹{{prod3.prodPrice}}</span>
-                    </div>
-                </div>
-            </form>
-            
-            <form action="/" method="post">
-                <div class="product-card" >
-                    <div class="product-image">
-                        <a href="#"><img src="/products/4.png" class="product-thumb" alt=""></a>
-                        <button class="card-btn" name="id" value=4 type="submit">Add To Cart</button>
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product_brand">{{prod4.prodName}}</h2>
-                        <p class="product-short-des">{{prod4.prodDesc}}</p>
-                        <span class="price">₹{{prod4.prodPrice}}</span>
-                    </div>
-                </div>            
-            </form>
-
-            <form action="/" method="post">
-                <div class="product-card" >
-                    <div class="product-image">
-                        <a href="#"><img src="/products/5.png" class="product-thumb" alt=""></a>
-                        <button class="card-btn" name="id" value=4 type="submit">Add To Cart</button>
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product_brand">{{prod5.prodName}}</h2>
-                        <p class="product-short-des">{{prod5.prodDesc}}</p>
-                        <span class="price">₹{{prod5.prodPrice}}</span>
-                    </div>
-                </div>            
-            </form>
-
+                </form>
+            {{/each}}
         </div>
     </section>
 

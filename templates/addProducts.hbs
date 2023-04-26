@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h2, initial-scale=1.0">
+    <title>Add a new Product</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: larger;">Add a new Product</h1>
+        <form action="/addProducts" method="post" enctype="multipart/form-data">
+            <input type="text" autocomplete="off" name="id" placeholder="product id" required>
+            <input type="text" autocomplete="off" name="name" placeholder="product name" required>
+            <input type="text" autocomplete="off" name="category" placeholder="category" required>
+            <textarea name="description" rows="2" placeholder="description" required></textarea>
+            <input type="number" autocomplete="off" name="price" placeholder="price" required>
+            <input type="number" autocomplete="off" name="stock" placeholder="stock" required>
+            <label>Upload Image</label><br>
+            <input type="file" name="image" required>
+            <button type="submit" class="submit-btn">Add product</button>
+        </form>
+        <h2 class="link" style="color:rgb(182, 93, 93)" >{{message}}</h2>
+    </div>
+</body>
+</html>

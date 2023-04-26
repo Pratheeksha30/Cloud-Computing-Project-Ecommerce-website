@@ -121,7 +121,7 @@
 .product-card{
     flex: 0 0 auto;
     width: 250px;
-    height: 450px;
+    height: 500px;
     margin-right: 40px;
 }
 
@@ -292,4 +292,19 @@
 .collection:nth-child(3){
     grid-column: span 2;
     margin-bottom: 10px;
+}
+
+.heading {
+    text-align:center;
+}
+
+.parent {
+    text-align: center;
+    align-self: center;
+}
+.child {
+    display: inline-block;
+    vertical-align: middle;
+    inline-size: 250px;
+    padding-right: 50px;
 }

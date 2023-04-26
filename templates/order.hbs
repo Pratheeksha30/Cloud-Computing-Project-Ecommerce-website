@@ -35,10 +35,13 @@
                 </div>
             {{/each}}
         </div>
-        <h2 style="text-align: center; padding:20px;"> Total Ammount : ₹{{total}}</h2>
+        {{#if isnotMessage}}
+        <h2 class="heading"style="padding:20px;"> Total Ammount : ₹{{total}}</h2>
+        {{/if}}
     </section>
     <br><br>
-    <h2 style="text-align: center;">{{message}}</h2>
+    <h2 class="heading">{{message}}</h2>
+    
 
 
 

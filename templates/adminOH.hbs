@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>Customer Orders</title>
     <link rel="stylesheet" href="/css/home.css">
 </head>
 
@@ -13,15 +13,17 @@
         <h1 style="color: white;">Cloud</h1>
         <div class="nav-items">
             <!-- <form action="" method="post"> -->
-                <h2 style="color:whitesmoke; font-size:x-large">Track Your Orders </h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="/" class="link" style="color: whitesmoke;">Home</a>
-                <a href="/userOH" class="link" style="color: whitesmoke;">Order History</a>
+                <h2 style="color:whitesmoke; font-size:x-large">Manage Orders </h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/adminHome" class="link" style="color: whitesmoke;">Current Orders</a>
+                <a href="/allProducts" class="link" style="color: whitesmoke;">Manage Products</a>
+                <a href="/login" class="link" style="color: whitesmoke;">Logout</a>
         </div>
     </div>
 
 
     <section class="product">
         {{#each Items}}
+            <h2 class="heading">Customer's Name : {{this.name}}</h2><br>
             <h2 class="heading">Order ID : {{this._id}}</h2><br>
             <div class="parent">
                 {{#each this.order}}
@@ -34,9 +36,9 @@
                 {{/each}}<br><br>
                 <h2 class="heading" style="font-size:medium;">Total Ammount : ₹{{this.total}}</h2><br>
                 <h2 class="heading" style="font-size:medium;">Ordered On : {{this.orderedDate}}</h2><br><br>
-                <form action="/ordersList" method="post">
-                    <button type="submit" name="oid" value={{this._id}}>Cancel Order</button>
-                </form>
+                <h2 class="heading" style="font-size:medium;">Delivery Address : {{this.Add}}</h2><br><br>
+                <h2 class="heading" style="font-size:medium;">Contact Number : {{this.Ph}}</h2><br><br>
+                <h2 class="heading" style="font-size:medium;">Delivered On : {{this.deliveredDate}}</h2><br><br>
             </div>
         {{/each}}
     </section>
