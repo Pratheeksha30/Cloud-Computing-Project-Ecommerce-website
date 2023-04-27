@@ -26,7 +26,7 @@
     <section class="product">
         <div class="product-container">
             {{#each items}}
-                <form action="/" method="post">
+                <form action="/allProducts" method="post">
                     <div class="product-card" >
                         <div class="product-image">
                             <a href="#"><img src="data:image/{{image.img.contentType}};base64,{{str this.img.data}}" class="product-thumb"  alt=""></a>
