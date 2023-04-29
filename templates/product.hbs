@@ -31,27 +31,16 @@
 
     <h2 style="text-align: center;">{{message}}</h2>
 
-    <section class="product">
-        <div class="product-container">
-            {{#each items}}
-                
-                    <div class="product-card" >
-                        <div class="product-image">
-                            <form action="/" method="post">
-                                <button type="submit" name="prod" value="{{this._id}}"><img src="data:image/{{image.img.contentType}};base64,{{str this.img.data}}" class="product-thumb"  alt=""></button>
-                            </form>
-                            <form action="/" method="post">
-                                <button class="card-btn" name="id" value={{this._id}} type="submit">Add To Cart</button>
-                            </form>
-                        </div>
-                        <div class="product-info">
-                            <h2 class="product_brand" >{{this.name}}</h2>
-                            <p class="product-short-des" >{{this.description}}</p>
-                            <span class="price" >₹{{this.price}}</span>
-                        </div>
-                    </div>
-                
-            {{/each}}
+    <section class="parent">
+        <img src="data:image/{{product.img.contentType}};base64,{{str product.img.data}}" alt="" height="500px">
+
+        <div style=" text-align:center; padding:50px ; padding-left: 200px; padding-right: 200px; position:relative;">
+            <h2 class="product-brand">{{product.name}}</h2><br>
+            <p class="product-short-des" style="font-size: larger;">{{product.description}}</p><br>
+            <span class="product-price" style="font-size: larger;"><b>₹{{product.price}}</b></span><br><br>
+            <form action="/" method="post">
+                <button type="submit" style="padding: 10px;" name="id" value="{{product._id}}">Add To Cart</button>
+            </form>
         </div>
     </section>
 

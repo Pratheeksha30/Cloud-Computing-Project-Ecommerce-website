@@ -20,19 +20,33 @@
             <li class="link-item"><a href="/" class="link">Continue Shopping</a></li>  
         </ul>
 
-        <form action="/cart" method="post">
-
             <section class="product">
-                <div class="product-container">
+                <div class="product-container" style="heigth: 600px;">
                     {{#each items}}
                         <div class="product-card">
-                            <div class="product-image">
-                                <a href="#"><img src="/products/{{this.prodId}}.png" class="product-thumb"alt=""></a>
-                            </div>
+                            <form action="/cart" method="post">
+                                <div class="product-image" style="heigth : 300px;">
+                                    <button type="submit" name="btn" value="prod"><a href="#"><img src="/products/{{this.prodId}}.png" class="product-thumb"alt=""></a></button>
+                                </div>
+                            </form>
                             <div class="product-info">
-                                <h2 class="product_brand" name="name">{{this.prodName}}</h2>
+                            
+                                <h2 class="product_brand">{{this.prodName}}</h2>
                                 <p class="product-short-des" name="desc">{{this.prodDesc}}</p>
                                 <span class="price" name="price">₹{{this.prodPrice}}</span>
+                                
+                                    <div class="quantity" style="display: inline-flex; width:100%;">
+                                        <form action="/cart" method="post">
+                                            <input type="text" name="id" value="{{this.prodId}}" style="visibility: hidden; width:0%;">
+                                            <button name="btn" value="+" type="submit"  class="quantity-btn" style="width: 20%;">+</button>
+                                        </form>
+                                        <h4 style="padding: 10px; padding-right : 40px;"> {{this.prodQuantity}} </h4>
+                                        <form action="/cart" method="post">
+                                            <input type="text" name="id" value="{{this.prodId}}" style="visibility: hidden; width:0%;">
+                                            <button name="btn" value="-" type="submit" class="quantity-btn" style="width: 20%;">-</button>
+                                        </form>
+                                    </div><br>
+                                    <h3>Only {{this.prodStock}} Left!</h3>
                             </div>
                         </div>
                     {{/each}}            
@@ -40,12 +54,12 @@
             </section>
             {{#if isnotMessage}}
             <br><h2 class ="link-item" style="text-align: center;">Total Ammount : ₹{{total}}</h2><br>
+            <form action="/cart" method="post">
                 <ul class="links-container">
-                    <li class ="link-item"><br><button href="/order" class="submit-btn" style="font-size: larger;" type="submit">Place Your Order</button></li>
+                    <li class ="link-item"><br><button href="/order" name="btn" value="placeOrder" class="submit-btn" style="font-size: larger;" type="submit">Place Your Order</button></li>
                 </ul>
+            </form>
             {{/if}}
-
-        </form>
 
         <br><br><h2 class="heading">{{message}}</h2>
 

@@ -26,11 +26,11 @@
     <section class="product">
         <div class="product-container">
             {{#each items}}
-                <form action="/allProducts" method="post">
+                <form action="/" method="post">
                     <div class="product-card" >
                         <div class="product-image">
                             <a href="#"><img src="data:image/{{image.img.contentType}};base64,{{str this.img.data}}" class="product-thumb"  alt=""></a>
-                            <button class="card-btn" name="id" value={{this._id}} type="submit">Remove Product</button>
+                            <button class="card-btn" name="id" value={{this._id}} type="submit">Remove Products</button>
                         </div>
                         <div class="product-info">
                             <h2 class="product_brand" >{{this.name}}</h2>

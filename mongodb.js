@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 var fs = require('fs');
 
-mongoose.connect("mongodb://mongo:27017/Ecommerce")
+mongoose.connect("mongodb://localhost:27017/Ecommerce")
 .then(()=>{
     console.log("mongoDB connected");
 })
@@ -65,7 +65,7 @@ const productSchema = new mongoose.Schema({
 })
 
 const cartSchema = new mongoose.Schema({
-    name:{
+    _id:{
         type:String,
         required:true
     },
